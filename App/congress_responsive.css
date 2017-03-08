@@ -190,6 +190,11 @@ td, th {
 }
 
 .starIconBorder {
-    border-style: solid;
-    background-color: darkgrey;
+    border-style: double;
+    background-color: #bcc3b8;
+}
+
+img {
+    height: 25;
+    width: 25;
 }

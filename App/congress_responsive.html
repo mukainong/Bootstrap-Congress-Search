@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="text-center">
-                    <a href="http://sunlightfoundation.com" target = "_blank"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/logo.png"></a><b>Congress API</b>
+                    <a href="http://sunlightfoundation.com" target = "_blank"><img src = "logo.png" width="200" height="50"></a><b>Congress API</b>
                 </div>
             </div>
             
@@ -168,11 +168,11 @@
                                                                 <th>State</th>
                                                                 <th>&nbsp;</th>
                                                             </tr>
-                                                            <tr dir-paginate="my in  myWelcome | filter: choice | orderBy:['state_name', 'last_name'] | itemsPerPage:10" pagination-id="statePag">
-                                                                <td ng-if="my.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25"></td>
+                                                            <tr dir-paginate="my in myWelcome | filter: choice | orderBy:['state_name', 'last_name'] | itemsPerPage:10" pagination-id="statePag">
+                                                                <td ng-if="my.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25"></td>
                                                                 <td>{{my.last_name}}, {{my.first_name}}</td>
-                                                                <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
-                                                                <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
+                                                                <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
+                                                                <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
                                                                 <td>district {{my.district}}</td>
                                                                 <td>{{my.state_name}}</td>
                                                                 <td><button href="#" type="button" class="btn btn-primary "data-target= "#myCarousel" role="button" data-interval="false" data-slide="next" ng-click="getFunction(my)">View Details</button></td>
@@ -208,9 +208,9 @@
                                                                 <th>&nbsp;</th>
                                                             </tr>
                                                             <tr dir-paginate="my in myWelcome | orderBy:['last_name', 'first_name'] | filter:searchHouse | filter:{chamber: 'house'} | itemsPerPage:10" pagination-id="housePag">
-                                                                <td ng-if="my.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25"></td>
+                                                                <td ng-if="my.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25"></td>
                                                                 <td>{{my.last_name}}, {{my.first_name}}</td>
-                                                                <td><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25"> 
+                                                                <td><img src = "h.png" HEIGHT="25" WIDTH="25"> 
                                                                     <span class="capitalFirst">{{my.chamber}}</span></td>
                                                                 <td>district {{my.district}}</td>
                                                                 <td>{{my.state_name}}</td>
@@ -246,9 +246,9 @@
                                                                 <th>&nbsp;</th>
                                                             </tr>
                                                             <tr dir-paginate="my in myWelcome | orderBy:['last_name', 'first_name'] | filter:searchSenate | filter:{chamber: 'senate'} | itemsPerPage:10" pagination-id="senatePag">
-                                                                <td ng-if="my.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25"></td>
+                                                                <td ng-if="my.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25"></td>
                                                                 <td>{{my.last_name}}, {{my.first_name}}</td>
-                                                                <td><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25"> 
+                                                                <td><img src = "s.png" HEIGHT="25" WIDTH="25"> 
                                                                     <span class="capitalFirst">{{my.chamber}}</span></td>
                                                                 <td>{{my.state_name}}</td>
                                                                 <td><button href="#" type="button" class="btn btn-primary "data-target= "#myCarousel" role="button" data-interval="false" data-slide="next" ng-click="getFunction(my)">View Details</button></td>
@@ -256,10 +256,10 @@
                                                         </table>
                                                         </td>
                                                     </tr>
-                                                </table>
-                                                <div class="text-center">
-                                                    <dir-pagination-controls boundary-links="true" pagination-id="senatePag"></dir-pagination-controls>
-                                                </div>
+                                                    </table>
+                                                    <div class="text-center">
+                                                        <dir-pagination-controls boundary-links="true" pagination-id="senatePag"></dir-pagination-controls>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -296,7 +296,7 @@
                                                                                 </a>
                                                                             </td>
                                                                         </tr>
-                                                                        <tr><td ng-if="somename.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25">Republican</td><td ng-if="somename.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25">Democratic</td></tr>
+                                                                        <tr><td ng-if="somename.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25">Republican</td><td ng-if="somename.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25">Democratic</td></tr>
                                                                     </table>
                                                                 </div>
                                                                 <table>
@@ -336,13 +336,13 @@
                                                                     <td class="hideble">Social Links</td>
                                                                     <td>
                                                                         <a class="anchor" href = "http://twitter.com/{{somename.twitter_id}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/t.png" HEIGHT="35" WIDTH="55">
+                                                                            <img src = "t.png" HEIGHT="35" WIDTH="55">
                                                                         </a>
                                                                         <a class="anchor" href = "http://facebook.com/{{somename.facebook_id}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/f.png" HEIGHT="35" WIDTH="35">
+                                                                            <img src = "f.png" HEIGHT="35" WIDTH="35">
                                                                         </a>
                                                                         <a class="anchor" href = "{{somename.website}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/w.png" HEIGHT="35" WIDTH="35">
+                                                                            <img src = "w.jpg" HEIGHT="35" WIDTH="35">
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -463,8 +463,8 @@
                                                                     <td>{{my.bill_id}}</td>
                                                                     <td class="capital">{{my.bill_type}}</td>
                                                                     <td class="hideble" style="width:30%">{{my.official_title}}</td>
-                                                                    <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25">House</td>
-                                                                    <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">Senate</td>
+                                                                    <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25">House</td>
+                                                                    <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25">Senate</td>
                                                                     <td>{{my.introduced_on}}</td>
                                                                     <td>{{my.sponsor.title}}. {{my.sponsor.last_name}}, {{my.sponsor.first_name}}</td>
                                                                     <td><button href="#" type="button" class="btn btn-primary "data-target= "#myCarousel1" role="button" data-interval="false" data-slide="next" ng-click="getFunction2(my)">View Details</button></td>
@@ -503,8 +503,8 @@
                                                                     <td>{{my.bill_id}}</td>
                                                                     <td class="capital">{{my.bill_type}}</td>
                                                                     <td class="hideble" style="width:30%">{{my.official_title}}</td>
-                                                                    <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25">House</td>
-                                                                    <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">Senate</td>
+                                                                    <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25">House</td>
+                                                                    <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25">Senate</td>
                                                                     <td>{{my.introduced_on}}</td>
                                                                     <td>{{my.sponsor.title}}. {{my.sponsor.last_name}}, {{my.sponsor.first_name}}</td>
                                                                     <td><button href="#" type="button" class="btn btn-primary "data-target= "#myCarousel1" role="button" data-interval="false" data-slide="next" ng-click="getFunction2(my)">View Details</button></td>
@@ -645,7 +645,7 @@
                                                                 </tr>
                                                                 <tr dir-paginate="my in myWelcome2 | orderBy:['committee_id'] | filter:{chamber:'house'} | filter:searchHouseCommittees | itemsPerPage:10" pagination-id="housePag1">
                                                                     <td><a href="#" ng-click="addFavourite3(my)" style="float:right"><span class="starIconBorder"><i ng-class="setStar(my)" aria-hidden="true" id="{{my.committee_id}}"></i></span></a></td>
-                                                                    <td><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25">House</td>
+                                                                    <td><img src = "h.png" HEIGHT="25" WIDTH="25">House</td>
                                                                     <td>{{my.committee_id}}</td>
                                                                     <td>{{my.name}}</td>
                                                                     <td ng-if="my.parent_committee_id==null">N.A.</td>
@@ -684,7 +684,7 @@
                                                                 </tr>
                                                                 <tr dir-paginate="my in myWelcome2 | orderBy:['committee_id'] | filter:{chamber:'senate'} | filter:searchSenateCommittees |  itemsPerPage:10" pagination-id="senatepag1">
                                                                     <td><a href="#" ng-click="addFavourite3(my)" style="float:right"><span class="starIconBorder"><i ng-class="setStar(my)" aria-hidden="true" id="{{my.committee_id}}"></i></span></a></td>
-                                                                    <td><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">Senate</td>
+                                                                    <td><img src = "s.png" HEIGHT="25" WIDTH="25">Senate</td>
                                                                     <td>{{my.committee_id}}</td>
                                                                     <td>{{my.name}}</td>
                                                                     <td ng-if="my.parent_committee_id==null">N.A.</td>
@@ -719,7 +719,7 @@
                                                                 </tr>
                                                                 <tr dir-paginate="my in myWelcome2 | orderBy:['committee_id'] | filter:searchJointCommittees | filter:{chamber: 'joint'} | itemsPerPage:10" pagination-id="jointpag">
                                                                     <td><a href="#" ng-click="addFavourite3(my)" style="float:right"><span class="starIconBorder"><i ng-class="setStar(my)" aria-hidden="true" id="{{my.committee_id}}"></i></span></a></td>
-                                                                    <td><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">Joint</td>
+                                                                    <td><img src = "s.png" HEIGHT="25" WIDTH="25">Joint</td>
                                                                     <td>{{my.committee_id}}</td>
                                                                     <td>{{my.name}}</td>
                                                                 </tr>
@@ -789,10 +789,10 @@
                                                             <tr ng-repeat="my in myWelcome3">
                                                                 <td><a href="#" ng-click="deleteFavourite(my)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                                                                 <td><img ng-src="https://theunitedstates.io/images/congress/225x275/{{my.bioguide_id}}.jpg" HEIGHT="35" WIDTH="30"></td>
-                                                                <td ng-if="my.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25"></td>
+                                                                <td ng-if="my.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25"></td><td ng-if="my.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25"></td>
                                                                 <td>{{my.last_name}}, {{my.first_name}}</td>
-                                                                <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
-                                                                <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
+                                                                <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
+                                                                <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25"><span class="capitalFirst">{{my.chamber}}</span></td>
                                                                 <td>{{my.state_name}}</td>
                                                                 <td><a class="anchor" ng-href = "mailto:{{my.oc_email}}" target = "_blank">
                                                                     {{my.oc_email}}
@@ -831,8 +831,8 @@
                                                                 <td>{{my.bill_id}}</td>
                                                                 <td class="capital">{{my.bill_type}}</td>
                                                                 <td style="width:30%">{{my.official_title}}</td>
-                                                                <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25"> House</td>
-                                                                <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25"> Senate</td>
+                                                                <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25"> House</td>
+                                                                <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25"> Senate</td>
                                                                 <td>{{my.introduced_on}}</td>
                                                                 <td>{{my.sponsor.title}}. {{my.sponsor.last_name}}, {{my.sponsor.first_name}}</td>
                                                                 <td><button href="#" type="button" class="btn btn-primary "data-target= "#myCarousel2" role="button" data-interval="false" data-slide-to="2" ng-click="getFunction2(my)">View Details</button></td>
@@ -862,9 +862,9 @@
                                                             </tr>
                                                             <tr ng-repeat="my in myWelcome5">
                                                                 <td><a href="#" ng-click="deleteFavourite3(my)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                                                                <td ng-if="my.chamber=='house'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/h.png" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
-                                                                <td ng-if="my.chamber=='senate'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
-                                                                <td ng-if="my.chamber=='joint'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/s.svg" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
+                                                                <td ng-if="my.chamber=='house'"><img src = "h.png" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
+                                                                <td ng-if="my.chamber=='senate'"><img src = "s.png" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
+                                                                <td ng-if="my.chamber=='joint'"><img src = "s.png" HEIGHT="25" WIDTH="25">{{my.chamber}}</td>
                                                                 <td>{{my.committee_id}}</td>
                                                                 <td>{{my.name}}</td>
                                                                 <td ng-if="my.parent_committee_id==null">N.A.</td>
@@ -912,7 +912,7 @@
                                                                                     </a>
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr><td ng-if="somename.party=='R'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/r.png" HEIGHT="25" WIDTH="25">Republican</td><td ng-if="somename.party=='D'"><img src = "http://cs-server.usc.edu:45678/hw/hw8/images/d.png" HEIGHT="25" WIDTH="25">Democratic</td></tr>
+                                                                            <tr><td ng-if="somename.party=='R'"><img src = "r.png" HEIGHT="25" WIDTH="25">Republican</td><td ng-if="somename.party=='D'"><img src = "d.png" HEIGHT="25" WIDTH="25">Democratic</td></tr>
                                                                         </table>
                                                                 </div>
                                                                 <table>
@@ -953,13 +953,13 @@
                                                                     <td class="hideble">Social Links</td>
                                                                     <td>
                                                                         <a class="anchor" href = "http://twitter.com/{{somename.twitter_id}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/t.png" HEIGHT="35" WIDTH="55">
+                                                                            <img src = "t.png" HEIGHT="35" WIDTH="55">
                                                                         </a>
                                                                         <a class="anchor" href = "http://facebook.com/{{somename.facebook_id}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/f.png" HEIGHT="35" WIDTH="35">
+                                                                            <img src = "f.png" HEIGHT="35" WIDTH="35">
                                                                         </a>
                                                                         <a class="anchor" href = "{{somename.website}}" target = "_blank">
-                                                                            <img src = "http://cs-server.usc.edu:45678/hw/hw8/images/w.png" HEIGHT="35" WIDTH="35">
+                                                                            <img src = "w.jpg" HEIGHT="35" WIDTH="35">
                                                                         </a>
                                                                     </td>
                                                                 </tr>
